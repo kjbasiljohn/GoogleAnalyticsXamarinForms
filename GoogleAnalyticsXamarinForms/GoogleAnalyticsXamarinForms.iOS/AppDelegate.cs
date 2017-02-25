@@ -23,6 +23,9 @@ namespace GoogleAnalyticsXamarinForms.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
             global::Xamarin.Forms.Forms.Init();
+
+            GAService.GetGASInstance().Initialize_NativeGAS();
+
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);
